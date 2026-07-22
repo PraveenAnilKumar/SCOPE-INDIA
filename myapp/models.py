@@ -60,7 +60,7 @@ class StudentDetails(models.Model):
 
     training_mode = models.CharField(max_length=50, choices=TrainingMode.choices, null=False)
 
-    location = models.CharField(max_length=50, choices=Location, null=False)
+    location = models.CharField(max_length=50, choices=Location.choices, null=False)
 
     timing = models.CharField(max_length=50, choices=TrainingTime.choices, null=False)
 
