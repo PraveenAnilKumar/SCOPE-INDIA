@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <a href="/myapp/home">
+          <img
+            class="logo-img"
+            src="{% static 'images/scopeindia-logo.png' %}"
+            alt="Scope India Logo"
+          />
+        </a>
+        <img
+          class="rating-img"
+          src="{% static 'images/google-rating-scope-india.png' %}"
+          alt="Google Rating Scope India"
+        />
+        <a href="/myapp/home">HOME </a>
+        <a href="/myapp/courses">COURSES</a>
+        <a href="/myapp/registration">REGISTRATION</a>
+        <a href="/myapp/placements">PLACEMENTS</a>
+        <a href="/myapp/about">ABOUT US</a>
+        <a href="/myapp/faq">FAQ</a>
+        <a href="/myapp/reviews">REVIEWS</a>
+        <a href="/myapp/contact">CONTACT US</a>
+      </div>
+    </div>
+    <form method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>

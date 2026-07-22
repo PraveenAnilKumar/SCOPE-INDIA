@@ -1,0 +1,377 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope India</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=3" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'images/scopeindia-logo.png' %}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <a href="{% url 'home' %}">
+          <img
+            class="logo-img"
+            src="{% static 'images/scopeindia-logo.png' %}"
+            alt="Scope India Logo"
+          />
+        </a>
+
+        <div class="right-section">
+          <img
+            class="rating-img"
+            src="{% static 'images/google-rating-scope-india.png' %}"
+            alt="Google Rating Scope India"
+          />
+
+          <div class="nav-links">
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'courses' %}">COURSES</a>
+            <a href="{% url 'registration' %}">REGISTRATION</a>
+            <a href="{% url 'placements' %}">PLACEMENTS</a>
+            <a href="{% url 'about' %}">ABOUT US</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+            <a href="{% url 'reviews' %}">REVIEWS</a>
+            <a href="{% url 'contacts' %}">CONTACT US</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container_page_intro">
+      <h1>Your career partner!</h1>
+    </div>
+    <div class="heading">
+      <h2>
+        Center for Advanced Data Science with GenAI, Data Analytics, DevOps,
+        Software, Networking, and Cloud Education
+      </h2>
+      <p>
+        One of India's best Training destinations for Advanced Data Science with
+        GenAI, Data Analytics, Software, Networking, DevOps, and Cloud Computing
+        courses with 18 years of Industrial experience. Over 1,000 students find
+        their dream careers each year, and we have assisted more than 15,000
+        students so far.
+      </p>
+    </div>
+    <div class="global-logos">
+      <h3>Get Globally Certified from SCOPE INDIA</h3>
+      <div class="logo-row">
+        <img src="{% static 'images/microsoft.png' %}" alt="microsoft" />
+        <img src="{% static 'images/ibm.png' %}" alt="ibm" />
+        <img src="{% static 'images/google.png' %}" alt="google" />
+        <img src="{% static 'images/amazon.png' %}" alt="amazon" />
+        <img src="{% static 'images/redhat.png' %}" alt="redhat" />
+        <img src="{% static 'images/istqb.png' %}" alt="istqb" />
+        <img src="{% static 'images/cisco.png' %}" alt="cisco" />
+        <img src="{% static 'images/github.png' %}" alt="github" />
+      </div>
+    </div>
+    <div class="fourth-div">
+      <!-- Left Section -->
+      <div class="left-section">
+        <h1>Dreaming about a career in IT</h1>
+
+        <h3>
+          Spearheaded by the working professionals of Suffix E Solutions in
+          flexible learning mode, we provide quality training with 100%
+          placement support.
+        </h3>
+        <h2>We provide comprehensive courses in:</h2>
+
+        <div class="course-list">
+          <ul>
+            <li>Advanced Data Science & AI</li>
+            <li>Data Science with GenAI</li>
+            <li>Data Analytics</li>
+            <li>DevOps</li>
+            <li>Networking</li>
+          </ul>
+
+          <ul>
+            <li>Software Programming</li>
+            <li>Software Testing</li>
+            <li>Server Administration</li>
+            <li>Cloud Computing</li>
+            <li>Mobile App Development</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right-cards">
+        <div class="card">
+          <h3>Classes</h3>
+          <p>Learn Anywhere, Anytime - Online & In-Person Classes Available!</p>
+        </div>
+
+        <div class="card">
+          <h3>Placement</h3>
+          <p>Guaranteed Success -100% Placement Support</p>
+        </div>
+
+        <div class="card">
+          <h3>Training</h3>
+          <p>Training by Working Professionals</p>
+        </div>
+
+        <div class="card">
+          <h3>Internship</h3>
+          <p>On the Job Training with Experience Certificate</p>
+        </div>
+      </div>
+    </div>
+    <div class="placement-promotion">
+      <div class="placement-section">
+        <div class="placement-promotion">
+          <h1>Placement Highlights</h1>
+        </div>
+        <div class="promo-cards">
+          <div class="promo-card">
+            <h1>100%</h1>
+            <p>Placement Assistance</p>
+          </div>
+          <div class="promo-card">
+            <h1>1000+</h1>
+            <p>Students are Getting Placed Every Year</p>
+          </div>
+          <div class="promo-card">
+            <h1>500+</h1>
+            <p>Partner Companies</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="AI-Intelligence">
+      <div class="AI-header">
+        <h1>Match the Pace of Artificial Intelligence</h1>
+        <a href="#" class="cta-button">Study AI From SCOPE INDIA</a>
+      </div>
+      <div class="AI-bottom">
+        <div class="AI-Course-Images">
+          <img
+            src="{% static 'images/robo-scope-site.png' %}"
+            alt="images/robo-scope-site.png"
+          />
+          <img
+            src="{% static 'images/data-science-ai-course-scopeindia.png' %}"
+            alt="data-science-ai-course-scopeindia.png"
+          />
+        </div>
+        <div class="second-list">
+          <ul>
+            <li>Python 3.12</li>
+            <li>Pandas</li>
+            <li>Matplotlib and Seaborn</li>
+            <li>Excel and Power BI</li>
+            <li>Machine Learning</li>
+            <li>English Language Training</li>
+          </ul>
+          <ul>
+            <li>SQL</li>
+            <li>NumPy</li>
+            <li>Tableau</li>
+            <li>Django and REST Services</li>
+            <li>Deep Learning & AI</li>
+            <li>Live Projects</li>
+          </ul>
+        </div>
+      </div>
+      <h3>
+        Harness the capabilities of machine learning, deep learning, natural
+        language processing and uncover hidden patterns, optimize processes, and
+        drive smarter decision-making.
+      </h3>
+    </div>
+    <div class="Fullstack">
+      <h1>Become a Full Stack Developer</h1>
+      <div class="fullstack-content">
+        <div class="pathway">
+          <h2>Your pathway includes</h2>
+          <ul class="pathway-steps">
+            <li class="step">
+              <span class="step-number">1</span>
+              <div class="step-text">
+                <p class="step-title">Foundation</p>
+                <p class="step-desc">Programming Fundamentals, SQL</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-number">2</span>
+              <div class="step-text">
+                <p class="step-title">Front End</p>
+                <p class="step-desc">
+                  HTML, CSS, JavaScript, jQuery, Bootstrap, React JS
+                </p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-number">3</span>
+              <div class="step-text">
+                <p class="step-title">Back End</p>
+                <p class="step-desc">
+                  Python / Java / ASP.NET / PHP / JavaScript
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="fullstack-img">
+          <img
+            src="{% static 'images/full-stack-course-scopeindia.png' %}"
+            alt="Become a Full Stack Developer in 4-5 months"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="prowess">
+      <h1>No Coding <span class="small-white">Prowess?</span> Not a Problem</h1>
+      <div class="prowess-content">
+        <div class="prowess-left">
+          <img
+            id="testing-image"
+            src="{% static 'images/software-testing-course-scopeindia.png' %}"
+            alt="Software Testing Course"
+          />
+        </div>
+        <div class="prowess-right">
+          <div class="prowess-badge">
+            Software Testing is the Gateway to Your IT Career
+          </div>
+          <ul class="prowess-list">
+            <li>Manual Testing</li>
+            <li>Automation Testing</li>
+            <li>Practical Sessions</li>
+            <li>Theoretical Sessions</li>
+            <li>Flexible Schedules</li>
+            <li>On Job Training</li>
+          </ul>
+        </div>
+      </div>
+      <p class="prowess-footer">
+        Start your tech journey today with <strong>SCOPE INDIA</strong> and make
+        your mark in the IT industry!
+      </p>
+    </div>
+    <div class="devops">
+      <p class="devops_title">Career with DevOps</p>
+
+      <div class="devops_content">
+        <div class="devops_links">
+          <div class="devops_links_header">
+            <span>Master DevOps From SCOPE INDIA</span>
+          </div>
+
+          <div class="devops_links_list">
+            <div class="devops_links_col">
+              <div class="devops_link_item">
+                <span class="check">&#10003;</span> Build Applications
+              </div>
+              <div class="devops_link_item">
+                <span class="check">&#10003;</span> Automate Workflows
+              </div>
+              <div class="devops_link_item">
+                <span class="check">&#10003;</span> Popular Tools
+              </div>
+              <div class="devops_link_item">
+                <span class="check">&#10003;</span> Cloud Management
+              </div>
+            </div>
+            <div class="devops_links_col">
+              <div class="devops_link_item">
+                <span class="check">&#10003;</span> Deploy Applications
+              </div>
+              <div class="devops_link_item">
+                <span class="check">&#10003;</span> Hands-on Experience
+              </div>
+              <div class="devops_link_item">
+                <span class="check">&#10003;</span> Cloud Infrastructure
+              </div>
+              <div class="devops_link_item">
+                <span class="check">&#10003;</span> Deployement Strategies
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="devops_image">
+          <img
+            src="{% static 'images/devops-course-scope-india.png' %}"
+            alt="Career with DevOps"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="business_intelligence">
+      <p>Match the Pace of Business Intelligence</p>
+
+      <div class="bi_row">
+        <div class="bi_image">
+          <img
+            src="{% static 'images/power-bi-course-scopeindia.png' %}"
+            alt="power business intelligence"
+          />
+        </div>
+
+        <div class="bi_right">
+          <div class="bi_badge">Study Power BI From SCOPE INDIA</div>
+          <div class="bi_columns">
+            <ul class="bi_list">
+              <li>Transform Raw Data</li>
+              <li>Hands-on Training</li>
+              <li>Flexible Schedules</li>
+            </ul>
+            <ul class="bi_list">
+              <li>Interactive Dashboards</li>
+              <li>Real-World Scenarios</li>
+              <li>On Job Training</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="our_mission_vision">
+      <h2>Our Mission & Vision</h2>
+      <div class="our_mission">
+        <div class="icon_circle">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3>Our Mission</h3>
+        <p>
+          SCOPE INDIA seeks to close the knowledge gap between education and
+          employment by offering interactive, industry-focused IT training led
+          by proficient working professionals and aligned with the latest trends
+          and technologies. Our objective is to provide people with the
+          technical expertise and confidence they need to build fulfilling
+          careers.
+        </p>
+        <ul class="mission_list">
+          <li>Industry-aligned curriculum</li>
+          <li>Practical skill developmen</li>
+          <li>Career-focused training</li>
+        </ul>
+      </div>
+      <div class="our_vision">
+        <h3>Our Vision</h3>
+        <p>
+          We aspire to become the most respected and forward-thinking training
+          organization in India and beyond by shaping the future of IT education
+          via innovation, integrity, and strong industry ties. We intend to
+          expand globally.
+        </p>
+        <ul>
+          <li>Global recognition</li>
+          <li>Innovation leadership</li>
+          <li>Technology excellence</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
