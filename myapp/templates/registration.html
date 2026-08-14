@@ -1,38 +1,69 @@
 {% load static %}
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration</title>
-    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
+    <title>Scope India</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}?v=3" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'images/scopeindia-logo.png' %}"
+    />
   </head>
   <body>
     <div class="container">
       <div class="logo">
-        <a href="/myapp/home">
+        <a href="{% url 'home' %}">
           <img
             class="logo-img"
             src="{% static 'images/scopeindia-logo.png' %}"
             alt="Scope India Logo"
           />
         </a>
-        <img
-          class="rating-img"
-          src="{% static 'images/google-rating-scope-india.png' %}"
-          alt="Google Rating Scope India"
-        />
-        <a href="/myapp/home">HOME </a>
-        <a href="/myapp/courses">COURSES</a>
-        <a href="/myapp/registration">REGISTRATION</a>
-        <a href="/myapp/placements">PLACEMENTS</a>
-        <a href="/myapp/about">ABOUT US</a>
-        <a href="/myapp/faq">FAQ</a>
-        <a href="/myapp/reviews">REVIEWS</a>
-        <a href="/myapp/contact">CONTACT US</a>
+
+        <div class="right-section">
+          <img
+            class="rating-img"
+            src="{% static 'images/google-rating-scope-india.png' %}"
+            alt="Google Rating Scope India"
+          />
+
+          <div class="nav-links">
+            <a href="{% url 'home' %}" class="active-text">HOME</a>
+            <a href="{% url 'courses' %}">COURSES</a>
+            <a href="{% url 'registration' %}" class="active-pill"
+              >REGISTRATION</a
+            >
+            <a href="{% url 'placements' %}">PLACEMENTS</a>
+            <a href="{% url 'about' %}">ABOUT US</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+            <a href="{% url 'reviews' %}">REVIEWS</a>
+            <a href="{% url 'contacts' %}">CONTACT US</a>
+          </div>
+        </div>
       </div>
     </div>
-    <form method="POST">
+
+    <div id="container_page_intro">
+      <h1>Your career partner!</h1>
+    </div>
+    <div class="heading">
+      <h2>
+        Center for Advanced Data Science with GenAI, Data Analytics, DevOps,
+        Software, Networking, and Cloud Education
+      </h2>
+      <p>
+        One of India's best Training destinations for Advanced Data Science with
+        GenAI, Data Analytics, Software, Networking, DevOps, and Cloud Computing
+        courses with 18 years of Industrial experience. Over 1,000 students find
+        their dream careers each year, and we have assisted more than 15,000
+        students so far.
+      </p>
+    </div>
+    <form method="POST" class="reg-form">
       {% csrf_token %} {{ form.as_p }}
       <button type="submit">Register</button>
     </form>

@@ -1,8 +1,16 @@
-body {
-  padding: 0px;
-  margin: 0px;
-  background-color: rgb(255, 255, 255);
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+* {
+  box-sizing: border-box;
 }
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .container {
   background: linear-gradient(90deg, rgb(4, 11, 45), #04145f);
   height: 175px;
@@ -13,19 +21,227 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   height: 100%;
   padding: 0 40px;
 }
 
 .logo-img {
-  width: 175px;
+  width: 180px;
   height: auto;
-  margin-left: -15px;
+  margin-left: -20px;
+  margin-top: 10px;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
 }
 
 .rating-img {
   width: 200px;
   height: auto;
-  margin-right: 80px;
+  margin-bottom: 15px;
+  margin-left: 375px;
+}
+.nav-links {
+  margin: 0;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-weight: 100;
+  font-size: 12px;
+  font-family: "Viga", sans-serif;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 100;
+  font-family: "Viga", sans-serif;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  height: 36px; /* same height for every link */
+  line-height: 1;
+}
+
+.nav-links a:visited {
+  color: white;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+.nav-links a.active-text {
+  color: #f0b429;
+}
+
+.nav-links a.active-pill {
+  background-color: #ff0000;
+  color: white;
+  padding: 0 16px; /* only horizontal padding — height comes from the fixed 36px */
+  border-radius: 20px;
+}
+#container_page_intro h1 {
+  font-family: "Viga", sans-serif;
+  color: #eeaf10;
+  font-size: 35px;
+  background: linear-gradient(60deg, #04145f 0%, rgb(4 13 55) 100%);
+  padding: 7px 15px;
+  display: block;
+  margin: 0px;
+  font-weight: normal;
+  border-top: 1.5px solid #c7ac20;
+  border-bottom: 1.5px solid #c7ac20;
+  text-align: center;
+}
+.heading {
+  text-align: center;
+  background-color: #f0f0f0;
+  margin-top: 0px;
+  margin-bottom: 0cap;
+}
+
+.heading h2 {
+  color: #04145f;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+body .heading h2 {
+  text-align: center !important;
+  color: #1a237e;
+  font-family: "Viga", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+.heading p {
+  text-align: left;
+  color: #1a0dab;
+  font-family: "Viga", sans-serif;
+  font-size: 17px;
+  margin: 15px;
+  margin-bottom: 5px;
+}
+
+.reg-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: #0a1a5c;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.reg-form p {
+  background-color: #ffffff;
+  border: 2px solid #f2c14e;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Viga", sans-serif;
+  font-weight: normal;
+}
+
+.reg-form label {
+  color: #0a1a5c;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.reg-form input[type="text"],
+.reg-form input[type="email"],
+.reg-form input[type="date"],
+.reg-form input[type="tel"],
+.reg-form input[type="number"],
+.reg-form select,
+.reg-form textarea {
+  background-color: #f2f2f2;
+  border: 1px solid #f2c14e;
+  border-radius: 20px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reg-form input[type="text"]:focus,
+.reg-form input[type="email"]:focus,
+.reg-form input[type="date"]:focus,
+.reg-form select:focus {
+  border-color: #0a1a5c;
+}
+
+/* Radio button group (Gender field) */
+.reg-form p:has(input[type="radio"]) {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reg-form p:has(input[type="radio"]) label:first-child {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.reg-form input[type="radio"] {
+  accent-color: #0a1a5c;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+}
+
+.reg-form ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.reg-form ul li {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #0a1a5c;
+}
+
+/* Submit button */
+.reg-form button {
+  grid-column: 1 / -1;
+  background-color: #f2c14e;
+  color: #0a1a5c;
+  border: none;
+  padding: 14px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  width: 200px;
+  justify-self: center;
+}
+
+.reg-form button:hover {
+  background-color: #e0ac2f;
+}
+
+@media (max-width: 900px) {
+  .reg-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .reg-form {
+    grid-template-columns: 1fr;
+  }
 }
