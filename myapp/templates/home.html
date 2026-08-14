@@ -32,9 +32,11 @@
           />
 
           <div class="nav-links">
-            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'home' %}" class="active-text">HOME</a>
             <a href="{% url 'courses' %}">COURSES</a>
-            <a href="{% url 'registration' %}">REGISTRATION</a>
+            <a href="{% url 'registration' %}" class="active-pill"
+              >REGISTRATION</a
+            >
             <a href="{% url 'placements' %}">PLACEMENTS</a>
             <a href="{% url 'about' %}">ABOUT US</a>
             <a href="{% url 'faq' %}">FAQ</a>
@@ -373,5 +375,20 @@
         </ul>
       </div>
     </div>
+    <div class="last-div">
+      <p id="first">
+        We are located at Technopark TVM | Thampanoor TVM | Kochi, Kerala |
+        Nagercoil, Tamil Nadu
+      </p>
+      <p id="second">
+        9745936073 (TPK) 9745936073 (TVM) 7592939481 (EKM) 8075536185 (NGL)
+        info@scopeindia.org
+      </p>
+      <p id="third">
+        All Rights Reserved SCOPE INDIA & SUFFIX E SOLUTIONS PRIVATE LIMITED ©
+        2007-2026 | Privacy Policy | Blog
+      </p>
+    </div>
+    <script src="nav.js"></script>
   </body>
 </html>

@@ -10,17 +10,36 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+def load_environment_file():
+    environment_file = BASE_DIR / '.env'
+    if not environment_file.exists():
+        return
+
+    for line in environment_file.read_text(encoding='utf-8').splitlines():
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+
+        key, separator, value = line.partition('=')
+        if separator:
+            os.environ.setdefault(key.strip(), value.strip())
+
+
+load_environment_file()
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2ttz4o$a3%hozzgo!m83qfdur=efk7ee4qfw*rgwvez2+fght)'
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -118,8 +137,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "aspraveenmeirl777@gmail.com"
-EMAIL_HOST_PASSWORD = "bmbi kgot lbon odpd"
-EMAIL_USE_TLS = True
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'true').lower() == 'true'

@@ -1,11 +1,81 @@
-<!DOCTYPE html>
+{% load static %}
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope India</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=3" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'images/scopeindia-logo.png' %}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <a href="{% url 'home' %}">
+          <img
+            class="logo-img"
+            src="{% static 'images/scopeindia-logo.png' %}"
+            alt="Scope India Logo"
+          />
+        </a>
+
+        <div class="right-section">
+          <img
+            class="rating-img"
+            src="{% static 'images/google-rating-scope-india.png' %}"
+            alt="Google Rating Scope India"
+          />
+
+          <div class="nav-links">
+            <a href="{% url 'home' %}" class="active-text">HOME</a>
+            <a href="{% url 'courses' %}">COURSES</a>
+            <a href="{% url 'registration' %}" class="active-pill"
+              >REGISTRATION</a
+            >
+            <a href="{% url 'placements' %}">PLACEMENTS</a>
+            <a href="{% url 'about' %}">ABOUT US</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+            <a href="{% url 'reviews' %}">REVIEWS</a>
+            <a href="{% url 'contacts' %}">CONTACT US</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container_page_intro">
+      <h1>Courses at SCOPE INDIA</h1>
+    </div>
+
+    <div class="heading">
+      <h2>
+        Center for Advanced Data Science with GenAI, Data Analytics, DevOps,
+        Software, Networking, and Cloud Education
+      </h2>
+      <p>
+        One of India's best Training destinations for Advanced Data Science with
+        GenAI, Data Analytics, Software, Networking, DevOps, and Cloud Computing
+        courses with 18 years of Industrial experience. Over 1,000 students find
+        their dream careers each year, and we have assisted more than 15,000
+        students so far.
+      </p>
+    </div>
+    <div class="global-logos">
+      <h3>Get Globally Certified from SCOPE INDIA</h3>
+      <div class="logo-row">
+        <img src="{% static 'images/microsoft.png' %}" alt="microsoft" />
+        <img src="{% static 'images/ibm.png' %}" alt="ibm" />
+        <img src="{% static 'images/google.png' %}" alt="google" />
+        <img src="{% static 'images/amazon.png' %}" alt="amazon" />
+        <img src="{% static 'images/redhat.png' %}" alt="redhat" />
+        <img src="{% static 'images/istqb.png' %}" alt="istqb" />
+        <img src="{% static 'images/cisco.png' %}" alt="cisco" />
+        <img src="{% static 'images/github.png' %}" alt="github" />
+      </div>
+    </div>
+  </body>
 </html>

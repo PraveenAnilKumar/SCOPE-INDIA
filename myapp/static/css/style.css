@@ -45,12 +45,12 @@ html {
   margin-bottom: 15px;
   margin-left: 375px;
 }
-
 .nav-links {
   margin: 0;
   scroll-behavior: smooth;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 22px;
   font-weight: 100;
   font-size: 12px;
   font-family: "Viga", sans-serif;
@@ -59,11 +59,13 @@ html {
 .nav-links a {
   text-decoration: none;
   color: white;
-  justify-content: space-between;
   font-weight: 100;
   font-family: "Viga", sans-serif;
-  margin-left: 15px;
   font-size: small;
+  display: flex;
+  align-items: center;
+  height: 36px; /* same height for every link */
+  line-height: 1;
 }
 
 .nav-links a:visited {
@@ -72,6 +74,17 @@ html {
 
 .nav-links a:hover {
   color: gold;
+}
+
+.nav-links a.active-text {
+  color: #f0b429;
+}
+
+.nav-links a.active-pill {
+  background-color: #ff0000;
+  color: white;
+  padding: 0 16px; /* only horizontal padding — height comes from the fixed 36px */
+  border-radius: 20px;
 }
 #container_page_intro h1 {
   font-family: "Viga", sans-serif;
@@ -946,4 +959,27 @@ body .heading h2 {
       "mission"
       "vision";
   }
+}
+
+.last-div {
+  border-top: 10px solid #f0b429;
+  list-style: none;
+  padding-bottom: 0px;
+  margin: 0px;
+  background-color: #0a1172;
+}
+#first {
+  text-align: center;
+  color: white;
+}
+#second {
+  text-align: center;
+  color: white;
+}
+#third {
+  text-align: center;
+  color: white;
+}
+.last-div > *:last-child {
+  margin-bottom: 0;
 }
