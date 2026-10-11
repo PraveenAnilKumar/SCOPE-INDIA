@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scope India</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=3" />
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}?v=3" />
     <link
       rel="icon"
       type="image/png"
@@ -76,6 +76,24 @@
         <img src="{% static 'images/cisco.png' %}" alt="cisco" />
         <img src="{% static 'images/github.png' %}" alt="github" />
       </div>
+    </div>
+    <div class="data-science-title">
+      <p>Data Science, AI, & Data Analytics Courses</p>
+    </div>
+    <div class="data-science-buttons">
+      <button>
+        <a href="{% url 'courses' %}">Data Science with GENAI Course</a>
+      </button>
+      <button>
+        <a href="{% url 'courses' %}">Data Science & AI Course</a>
+      </button>
+      <button>
+        <a href="{% url 'courses' %}">Data Analytics Course</a>
+      </button>
+
+      <button>
+        <a href="{% url 'courses' %}">Microsoft Power BI Course </a>
+      </button>
     </div>
   </body>
 </html>
