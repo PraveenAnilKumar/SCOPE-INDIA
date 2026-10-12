@@ -1,11 +1,368 @@
-<!DOCTYPE html>
+{% load static %}
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope India</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}?v=4" />
+    <link rel="icon" type="image/png" href="{% static 'images/bird.png' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="container">
+      <div class="logo">
+        <a href="{% url 'home' %}">
+          <img
+            class="logo-img"
+            src="{% static 'images/scopeindia-logo.png' %}"
+            alt="Scope India Logo"
+          />
+        </a>
+
+        <div class="right-section">
+          <img
+            class="rating-img"
+            src="{% static 'images/google-rating-scope-india.png' %}"
+            alt="Google Rating Scope India"
+          />
+
+          <div class="nav-links">
+            <a href="{% url 'home' %}" class="active-text">HOME</a>
+            <a href="{% url 'courses' %}">COURSES</a>
+            <a href="{% url 'registration' %}" class="active-pill"
+              >REGISTRATION</a
+            >
+            <a href="{% url 'placements' %}">PLACEMENTS</a>
+            <a href="{% url 'about' %}">ABOUT US</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+            <a href="{% url 'reviews' %}">REVIEWS</a>
+            <a href="{% url 'contacts' %}">CONTACT US</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container_page_intro">
+      <h1>Know About SCOPE INDIA</h1>
+    </div>
+
+    <!-- CERTIFICATION LOGOS -->
+    <div class="global-logos">
+      <h3>Get Globally Certified from SCOPE INDIA</h3>
+      <div class="logo-row">
+        <img src="{% static 'images/microsoft.png' %}" alt="microsoft" />
+        <img src="{% static 'images/ibm.png' %}" alt="ibm" />
+        <img src="{% static 'images/google.png' %}" alt="google" />
+        <img src="{% static 'images/amazon.png' %}" alt="amazon" />
+        <img src="{% static 'images/redhat.png' %}" alt="redhat" />
+        <img src="{% static 'images/istqb.png' %}" alt="istqb" />
+        <img src="{% static 'images/cisco.png' %}" alt="cisco" />
+        <img src="{% static 'images/github.png' %}" alt="github" />
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about">
+      <h1>SCOPE INDIA, your career partner!</h1>
+      <h2>
+        One of India's best Training destinations for Advanced Data Science and
+        Artificial Intelligence, Advanced Data Science with Gen AI, Advanced
+        Data Analytics, Software Development, DevOps and Cloud Computing courses
+        with 19 years of Industrial experience. Over 1,000 students find their
+        dream careers each year, and we have assisted more than 16,000 students
+        so far.
+      </h2>
+      <p>
+        SCOPE INDIA - A Professional Education Centre in Kerala and Tamil Nadu
+        from Suffix E Solutions, an IT company - is a trusted training institute
+        dedicated to helping students build successful careers in the IT
+        industry through practical learning and industry-focused training. With
+        19 years of experience in professional education, SCOPE INDIA has become
+        a preferred choice for students who want to gain real-world technical
+        skills and enhance their career opportunities. SCOPE INDIA always
+        focuses on a job-oriented curriculum that helps students adapt to new
+        technologies.
+      </p>
+      <p>
+        At SCOPE INDIA, learning is designed to be practical and
+        career-oriented. The courses are structured to help students understand
+        how real IT companies work, giving them the confidence and skills needed
+        to start their careers successfully. Instead of focusing only on theory,
+        students get opportunities to work on live projects and internship-based
+        training that improve their technical knowledge and hands-on experience.
+        SCOPE INDIA provides courses for Advanced Data Science and Artificial
+        Intelligence, Advanced Data Science with Gen AI, Advanced Data
+        Analytics, Python Full Stack, Java Full Stack, .Net Full Stack, PHP Full
+        Stack, Power BI with excel advanced, Advanced MERN Full Stack, MEAN Full
+        Stack, Software Testing Manual and Automation, Playwright, Cloud
+        Computing (AWS / Azure), Server Administration (Linux-RHCE), Networking
+        (CCNA), DevOps (Docker, Kubernetes, Jenkins- CI/CD) Mobile App
+        Development in Flutter, and Advanced Digital Marketing.
+      </p>
+      <p>
+        One of the biggest advantages of learning at SCOPE INDIA is the 100%
+        placement support provided to students who successfully complete their
+        training programs. From resume preparation and interview guidance to
+        placement assistance, students receive complete support throughout their
+        career journey.
+      </p>
+      <p>
+        SCOPE INDIA provides On the Job Training (OJT) for students who have
+        completed their course. During this period, they work on real-time and
+        commercial projects from Suffix E Solutions - an IT company. This
+        experience makes students 100% confident in understanding how real
+        projects start and finish, including the end-to-end project delivery
+        process.
+      </p>
+      <p>
+        Students also gain valuable project experience during their internship
+        period, helping them improve problem-solving abilities, teamwork, and
+        practical implementation skills. This real-time exposure prepares them
+        to work confidently in professional environments from the very beginning
+        of their careers.
+      </p>
+      <p>
+        What truly makes SCOPE INDIA different is the continuous support offered
+        even after placement. The institution believes in building long-term
+        relationships with students by providing lifelong career guidance,
+        professional assistance, and skill support whenever needed.
+      </p>
+      <p>
+        With branches in Thiruvananthapuram, Kochi, Nagercoil, and Technopark,
+        SCOPE INDIA continues to guide aspiring professionals toward a brighter
+        future through quality education, practical training, and dedicated
+        career support.
+      </p>
+      <img src="{% static 'images/5star.png' %}" alt="5star" />
+      <p>Google 4.9 * Rated Institute</p>
+    </div>
+
+    <!-- OUR STORY -->
+    <section class="story">
+      <div class="story-head">
+        <h2>Our Story</h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="story-grid">
+        <!-- LEFT COLUMN: three stacked cards -->
+        <div class="story-col">
+          <div class="story-card">
+            <h3>Founded in 2007</h3>
+            <p>
+              With over two decades of experience creating extensive internet
+              systems, Suffix E Solutions is a top provider of networking and
+              software services. By concentrating on our clients' primary needs,
+              we provide dependable and useful solutions that are suited to
+              their specifications. From documentation and framework design to
+              coding, testing, and continuing maintenance, we have experience
+              with every stage of the development lifecycle. Our knowledgeable
+              engineers, who have 18 years of experience in a variety of fields,
+              offer detailed direction at every stage of the development
+              process. Our vast knowledge base enables us to provide our clients
+              with accurate and efficient solutions.
+            </p>
+            <div class="certs">
+              <img src="{% static 'images/iso.png' %}" alt="ISO 9001" />
+              <img src="{% static 'images/iaf.png' %}" alt="IAF" />
+              <img src="{% static 'images/ias.png' %}" alt="IAS" />
+            </div>
+            <p class="cert-text">An ISO 9001:2015 Certified Company</p>
+          </div>
+
+          <div class="story-card">
+            <h3>Evolution</h3>
+            <p>
+              SCOPE INDIA was launched in 2015 by Suffix E Solutions to address
+              the growing demand for industry-relevant IT training under
+              proficient working professionals. What began as a mission to
+              bridge the gap between education and employment has grown into one
+              of the most recognized names in tech education.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <h3>Growth</h3>
+            <p>
+              SCOPE INDIA began its journey in Trivandrum in 2015 and has
+              steadily grown into a multi-location training powerhouse. In 2019,
+              we expanded to Kochi to support more aspiring professionals. In
+              2021, the Nagercoil branch was proudly launched, and in 2023, we
+              launched our Technopark branch - bringing our high-quality
+              training even closer to the heart of Kerala's IT hub. Each branch
+              reflects our commitment to making world-class IT education
+              accessible to more people.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: photo, stats, impact card -->
+        <div class="story-col">
+          <img
+            class="team-photo"
+            src="{% static 'images/team.gif' %}"
+            alt="Our team"
+          />
+
+          <div class="stats-wrap">
+            <div class="stats">
+              <div class="stat">
+                <span class="icon"
+                  ><img
+                    src="{% static 'images/graduate.png' %}"
+                    alt="Students placed"
+                /></span>
+                <div>
+                  <strong>15000+</strong>
+                  <p>Students are Placed</p>
+                </div>
+              </div>
+              <div class="stat">
+                <span class="icon"
+                  ><img
+                    src="{% static 'images/residential.png' %}"
+                    alt="Partner companies"
+                /></span>
+                <div>
+                  <strong>500+</strong>
+                  <p>Partner Companies</p>
+                </div>
+              </div>
+              <div class="stat">
+                <span class="icon"
+                  ><img
+                    src="{% static 'images/active-user.png' %}"
+                    alt="Placement assistance"
+                /></span>
+                <div>
+                  <strong>100%</strong>
+                  <p>Placement Assistance</p>
+                </div>
+              </div>
+              <div class="stat">
+                <span class="icon"
+                  ><img
+                    src="{% static 'images/briefcase.png' %}"
+                    alt="Job-oriented curriculum"
+                /></span>
+                <div>
+                  <strong>100%</strong>
+                  <p>Job-oriented curriculum</p>
+                </div>
+              </div>
+              <div class="stat">
+                <span class="icon"
+                  ><img
+                    src="{% static 'images/laptop.png' %}"
+                    alt="On-the-job training"
+                /></span>
+                <div>
+                  <strong>OJT</strong>
+                  <p>On-the-job training</p>
+                </div>
+              </div>
+              <div class="stat">
+                <span class="icon"
+                  ><img src="{% static 'images/folder.png' %}" alt="Projects"
+                /></span>
+                <div>
+                  <strong>Projects</strong>
+                  <p>Hands-on Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <h3>Present Day Impact</h3>
+            <p>
+              SCOPE INDIA has helped 15,000+ students build successful careers
+              in IT. From fresh graduates to working professionals, our alumni
+              are now placed in reputed companies across India and abroad,
+              thanks to our dedicated placement support and industry-driven
+              training. The team adopts all contemporary technologies from time
+              to time, including Data Science, Artificial Intelligence, Cloud
+              Computing, DevOps, etc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MISSION & VISION -->
+    <section class="mv">
+      <h2 class="mv-title">Our Mission &amp; Vision</h2>
+
+      <div class="mv-grid">
+        <div class="mv-card">
+          <span class="mv-icon"><i class="fa-solid fa-bolt"></i></span>
+          <h3>Our Mission</h3>
+          <p>
+            SCOPE INDIA seeks to close the knowledge gap between education and
+            employment by offering interactive, industry-focused IT training led
+            by proficient working professionals and aligned with the latest
+            trends and technologies. Our objective is to provide people with the
+            technical expertise and confidence they need to build fulfilling
+            careers.
+          </p>
+          <ul class="mv-list">
+            <li>
+              <i class="fa-solid fa-check"></i>Industry-aligned curriculum
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Practical skill development
+            </li>
+            <li><i class="fa-solid fa-check"></i>Career-focused training</li>
+          </ul>
+        </div>
+
+        <div class="mv-card">
+          <span class="mv-icon"><i class="fa-solid fa-users"></i></span>
+          <h3>Our Vision</h3>
+          <p>
+            We aspire to become the most respected and forward-thinking training
+            organization in India and beyond by shaping the future of IT
+            education via innovation, integrity, and strong industry ties. We
+            intend to expand globally.
+          </p>
+          <ul class="mv-list">
+            <li><i class="fa-solid fa-check"></i>Global recognition</li>
+            <li><i class="fa-solid fa-check"></i>Innovation leadership</li>
+            <li><i class="fa-solid fa-check"></i>Technology excellence</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p class="footer-locations">
+        We are located at Technopark TVM | Thampanoor TVM | Kochi, Kerala |
+        Nagercoil, Tamil Nadu
+      </p>
+
+      <div class="footer-contacts">
+        <a href="tel:9745936073">9745936073 (TPK)</a>
+        <a href="tel:9745936073">9745936073 (TVM)</a>
+        <a href="tel:7592939481">7592939481 (EKM)</a>
+        <a href="tel:8075536185">8075536185 (NGL)</a>
+        <a href="mailto:info@scopeindia.org">info@scopeindia.org</a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>All Rights Reserved</span>
+        <span>SCOPE INDIA &amp; SUFFIX E SOLUTIONS PRIVATE LIMITED</span>
+        <span>&copy; 2007-2026</span>
+        <span class="divider">|</span>
+        <a href="#">Privacy Policy</a>
+        <span class="divider">|</span>
+        <a href="#">Blog</a>
+      </div>
+    </footer>
+    <script src="{% static 'js/nav.js' %}"></script>
+  </body>
 </html>

@@ -153,40 +153,260 @@ body .heading h2 {
   margin-bottom: 20px;
 }
 .data-science-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffd502;
-  padding: 4px 0px;
-  margin-bottom: 0; /* was 40px — that's the gap */
+  background-color: #fdd820;
+  border-top: 6px solid #c9a21a;
+  padding: 10px 0;
 }
+
 .data-science-title p {
   text-align: center;
   font-size: 25px;
   color: #04145f;
   font-family: "Viga", sans-serif;
-  margin: 8px 0; /* replace the invalid negative padding */
-  line-height: 1; /* tightens space around the text itself */
+  margin: 0;
+  line-height: 1.2;
 }
+
 .data-science-buttons {
   background-color: #04145f;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 12px 0;
+  border-bottom: 6px solid #c9a21a;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 18px;
+  padding: 25px 13px;
 }
 
-.data-science-buttons a {
-  color: white;
+.data-science-buttons a,
+.data-science-buttons a:link,
+.data-science-buttons a:visited {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #04145f;
+  border: 2px solid #d9b630;
+  border-radius: 10px;
+  padding: 18px 22px;
   text-decoration: none;
   font-family: "Viga", sans-serif;
-  font-size: 14px;
+  font-size: 20px !important;
 }
 
-.data-science-buttons a:visited {
-  color: white;
+/* right-pointing triangle */
+.data-science-buttons a::after {
+  content: "";
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 18px solid #04145f;
+  flex-shrink: 0;
+  margin-left: 18px;
 }
 
 .data-science-buttons a:hover {
-  color: #eeaf10;
+  color: #04145f;
+  background-color: #f3f6ff;
+}
+
+/* stack on smaller screens */
+@media (max-width: 900px) {
+  .data-science-buttons {
+    grid-template-columns: 1fr;
+  }
+  .data-science-buttons a {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+.ai-integrated-courses {
+  background-color: #fdd820;
+  border-top: 6px solid #c9a21a;
+  padding: 10px 0;
+}
+
+.ai-integrated-courses p {
+  text-align: center;
+  font-size: 25px;
+  color: #04145f;
+  font-family: "Viga", sans-serif;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ai-integrated-courses-buttons {
+  background-color: #04145f;
+  border-bottom: 6px solid #c9a21a;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 18px;
+  padding: 25px 13px;
+}
+
+.ai-integrated-courses-buttons a,
+.ai-integrated-courses-buttons a:link,
+.ai-integrated-courses-buttons a:visited {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #04145f;
+  border: 2px solid #d9b630;
+  border-radius: 10px;
+  padding: 18px 22px;
+  text-decoration: none;
+  font-family: "Viga", sans-serif;
+  font-size: 20px;
+}
+
+/* right-pointing triangle */
+.ai-integrated-courses-buttons a::after {
+  content: "";
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 18px solid #04145f;
+  flex-shrink: 0;
+  margin-left: 18px;
+}
+
+.ai-integrated-courses-buttons a:hover {
+  color: #04145f;
+  background-color: #f3f6ff;
+}
+
+/* stack on smaller screens */
+@media (max-width: 900px) {
+  .ai-integrated-courses-buttons {
+    grid-template-columns: 1fr;
+  }
+  .ai-integrated-courses-buttons a {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+
+.software-testing-courses {
+  background-color: #fdd820;
+  border-top: 6px solid #c9a21a;
+  padding: 10px 0;
+}
+
+.software-testing-courses p {
+  text-align: center;
+  font-size: 25px;
+  color: #04145f;
+  font-family: "Viga", sans-serif;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.software-testing-courses-buttons {
+  background-color: #04145f;
+  border-bottom: 6px solid #c9a21a;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 18px;
+  padding: 25px 13px;
+}
+
+.software-testing-courses-buttons a,
+.software-testing-courses-buttons a:link,
+.software-testing-courses-buttons a:visited {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #04145f;
+  border: 2px solid #d9b630;
+  border-radius: 10px;
+  padding: 18px 22px;
+  text-decoration: none;
+  font-family: "Viga", sans-serif;
+  font-size: 20px;
+}
+
+/* right-pointing triangle */
+.software-testing-courses-buttons a::after {
+  content: "";
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 18px solid #04145f;
+  flex-shrink: 0;
+  margin-left: 18px;
+}
+
+.software-testing-courses-buttons a:hover {
+  background-color: #f3f6ff;
+}
+
+/* stack on smaller screens */
+@media (max-width: 900px) {
+  .software-testing-courses-buttons {
+    grid-template-columns: 1fr;
+  }
+  .software-testing-courses-buttons a {
+    padding: 20px;
+  }
+}
+
+.other-courses {
+  background-color: #fdd820;
+  border-top: 6px solid #c9a21a;
+  padding: 10px 0;
+}
+
+.other-courses p {
+  text-align: center;
+  font-size: 25px;
+  color: #04145f;
+  font-family: "Viga", sans-serif;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.other-courses-buttons {
+  background-color: #04145f;
+  border-bottom: 6px solid #c9a21a;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 18px;
+  padding: 25px 13px;
+}
+
+.other-courses-buttons a,
+.other-courses-buttons a:link,
+.other-courses-buttons a:visited {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #04145f;
+  border: 2px solid #d9b630;
+  border-radius: 10px;
+  padding: 18px 22px;
+  text-decoration: none;
+  font-family: "Viga", sans-serif;
+  font-size: 20px;
+}
+
+/* right-pointing triangle */
+.other-courses-buttons a::after {
+  content: "";
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 18px solid #04145f;
+  flex-shrink: 0;
+  margin-left: 18px;
+}
+
+.other-courses-buttons a:hover {
+  background-color: #f3f6ff;
+}
+
+/* stack on smaller screens */
+@media (max-width: 900px) {
+  .other-courses-buttons {
+    grid-template-columns: 1fr;
+  }
+  .other-courses-buttons a {
+    padding: 20px;
+  }
 }

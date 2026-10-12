@@ -1,0 +1,586 @@
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ---------- HEADER ---------- */
+.container {
+  background: linear-gradient(90deg, rgb(4, 11, 45), #04145f);
+  height: 175px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 40px;
+}
+
+.logo-img {
+  width: 180px;
+  height: auto;
+  margin-left: -20px;
+  margin-top: 10px;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.rating-img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+  margin-left: 375px;
+}
+
+.nav-links {
+  margin: 0;
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-weight: 100;
+  font-size: 12px;
+  font-family: "Viga", sans-serif;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 100;
+  font-family: "Viga", sans-serif;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  line-height: 1;
+}
+
+.nav-links a:visited {
+  color: white;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+.nav-links a.active-text {
+  color: #f0b429;
+}
+
+.nav-links a.active-pill {
+  background-color: #ff0000;
+  color: white;
+  padding: 0 16px;
+  border-radius: 20px;
+}
+
+/* ---------- PAGE INTRO ---------- */
+#container_page_intro h1 {
+  font-family: "Viga", sans-serif;
+  color: #eeaf10;
+  font-size: 35px;
+  background: linear-gradient(60deg, #04145f 0%, rgb(4 13 55) 100%);
+  padding: 7px 15px;
+  display: block;
+  margin: 0;
+  font-weight: normal;
+  border-top: 1.5px solid #c7ac20;
+  border-bottom: 1.5px solid #c7ac20;
+  text-align: center;
+}
+
+/* ---------- GLOBAL LOGOS ---------- */
+.global-logos {
+  background-color: #f0f0f0;
+  border-top: 5px solid #04145f;
+}
+
+.global-logos h3 {
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+  font-family: "Viga", sans-serif;
+  font-weight: 100;
+  color: #04145f;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-row img {
+  margin-top: 10px;
+  height: 30px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+  background: #0a1f7c;
+  padding: 60px 5%;
+  font-family: "Viga", sans-serif;
+}
+
+.about h1 {
+  color: #ffcc00;
+  text-align: center;
+  font-family: "Viga", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin: 0 0 40px;
+}
+
+.about h2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Viga", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 auto 60px;
+  max-width: 1750px;
+}
+
+.about p {
+  color: #ffffff;
+  text-align: justify;
+  font-family: "Viga", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  line-height: 1.95;
+  margin: 0 auto 30px;
+  max-width: 1720px;
+  padding: 0 10px;
+}
+
+.about img {
+  display: block;
+  margin: 20px auto 10px;
+  height: auto;
+  width: 275px;
+}
+
+.about img + p {
+  text-align: center;
+}
+
+/* ---------- OUR STORY ---------- */
+.story {
+  background: #fff;
+  padding: 60px 6%;
+  font-family: "Viga", sans-serif;
+}
+
+.story-head {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.story-head h2 {
+  color: #0a1f7c;
+  font-size: 3rem;
+  margin: 0 0 20px;
+}
+
+.story-head .underline {
+  display: block;
+  width: 180px;
+  height: 6px;
+  background: #2563eb;
+  margin: 0 auto;
+}
+
+/* Two columns */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Each column stacks its children */
+.story-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* White cards */
+.story-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.story-card h3 {
+  color: #0a1f7c;
+  font-size: 1.9rem;
+  margin: 0 0 24px;
+}
+
+.story-card p {
+  color: #0a2aa8;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.certs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.certs img {
+  height: 90px;
+  width: auto;
+}
+
+.story-card .cert-text {
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Team photo */
+.team-photo {
+  width: 100%;
+  height: 417px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+/* Stats: wrapper is a positioning box */
+.stats-wrap {
+  position: relative;
+  margin: 20px 24px 20px 0; /* right margin leaves room for the blue block */
+}
+
+/* Blue block behind the card, shifted up and right */
+.stats-wrap::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  bottom: 24px;
+  left: 24px;
+  background: #2563eb;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+/* White stats card */
+.stats {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  padding: 36px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 30px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat > div {
+  text-align: center;
+}
+
+.stat .icon {
+  flex: 0 0 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 1.6rem;
+  display: grid;
+  place-items: center;
+}
+
+.stat .icon img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+
+.stat strong {
+  display: block;
+  color: #0a1f7c;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.stat p {
+  margin: 4px 0 0;
+  color: #0a2aa8;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+/* ---------- RESPONSIVE (keep at the end) ---------- */
+@media (max-width: 900px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story-head h2 {
+    font-size: 2.2rem;
+  }
+
+  .story-head {
+    margin-bottom: 50px;
+  }
+
+  .story-card {
+    padding: 28px;
+  }
+
+  .team-photo {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .stats-wrap {
+    margin: 20px 16px 20px 0;
+  }
+
+  .stats-wrap::before {
+    top: -16px;
+    right: -16px;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    padding: 28px 20px;
+  }
+
+  .stat p {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about h1 {
+    font-size: 2rem;
+  }
+
+  .about h2 {
+    font-size: 1.3rem;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+    line-height: 1.7;
+  }
+}
+/* ---------- MISSION & VISION ---------- */
+/* ---------- MISSION & VISION ---------- */
+.mv {
+  background: linear-gradient(90deg, rgb(4, 11, 45), #0a1f7c 40%);
+  padding: 55px 4% 65px; /* was 70px 4% 80px */
+  font-family: "Viga", sans-serif;
+}
+
+.mv-title {
+  color: #ffcc00;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0 0 45px; /* was 60px */
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.mv-card {
+  border: 1.5px solid #e6b800;
+  border-radius: 30px;
+  padding: 32px 40px 28px; /* was 42px 42px 36px */
+  color: #fff;
+}
+
+.mv-icon {
+  width: 70px; /* was 82px */
+  height: 70px;
+  border-radius: 50%;
+  background: #e0ac0c;
+  color: #fff;
+  font-size: 1.7rem; /* was 2rem */
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px; /* was 34px */
+}
+
+.mv-card h3 {
+  color: #fff;
+  font-size: 1.9rem; /* was 2.1rem */
+  font-weight: 400;
+  margin: 0 0 20px; /* was 28px */
+}
+
+.mv-card p {
+  color: #fff;
+  font-size: 1rem; /* was 1.05rem */
+  line-height: 1.45;
+  margin: 0 0 20px; /* was 26px */
+}
+
+.mv-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mv-list li {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 1rem; /* was 1.05rem */
+  color: #fff;
+  margin-bottom: 14px; /* was 18px */
+}
+
+.mv-list li:last-child {
+  margin-bottom: 0;
+}
+
+.mv-list i {
+  color: #ffcc00;
+  font-size: 1.1rem;
+  width: 22px;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+  .mv-title {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+  .mv-card {
+    padding: 26px 22px;
+  }
+}
+/* Mobile: put this inside your existing @media (max-width: 900px) block */
+@media (max-width: 900px) {
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+  .mv-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  .mv-card {
+    padding: 30px 24px;
+  }
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: linear-gradient(180deg, #1230b0 0%, #0a1f7c 45%, #061566 100%);
+  border-top: 12px solid #c9a926;
+  padding: 24px 4% 28px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffcc00;
+}
+
+.footer-locations {
+  font-size: 0.9rem;
+  margin: 0 0 24px;
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px 40px;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom .divider {
+  margin: 0 4px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .footer-locations,
+  .footer-contacts,
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+  .footer-contacts {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

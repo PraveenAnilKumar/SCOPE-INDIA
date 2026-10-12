@@ -7,11 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scope India</title>
     <link rel="stylesheet" href="{% static 'css/courses.css' %}?v=3" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="{% static 'images/scopeindia-logo.png' %}"
-    />
+    <link rel="icon" type="image/png" href="{% static 'images/bird.png' %}" />
   </head>
   <body>
     <div class="container">
@@ -78,22 +74,46 @@
       </div>
     </div>
     <div class="data-science-title">
-      <p>Data Science, AI, & Data Analytics Courses</p>
+      <p>Data Science, AI, &amp; Data Analytics Courses</p>
     </div>
     <div class="data-science-buttons">
-      <button>
-        <a href="{% url 'courses' %}">Data Science with GENAI Course</a>
-      </button>
-      <button>
-        <a href="{% url 'courses' %}">Data Science & AI Course</a>
-      </button>
-      <button>
-        <a href="{% url 'courses' %}">Data Analytics Course</a>
-      </button>
+      <a href="{% url 'courses' %}">Data Science with GENAI Course</a>
+      <a href="{% url 'courses' %}">Data Science &amp; AI Course</a>
+      <a href="{% url 'courses' %}">Data Analytics Course</a>
+      <a href="{% url 'courses' %}">Microsoft Power BI Course</a>
+    </div>
+    <div class="ai-integrated-courses">
+      <p>AI Integrated Software Courses</p>
+    </div>
+    <div class="ai-integrated-courses-buttons">
+      <a href="{% url 'courses' %}">Java Full Stack AI Integrated Course</a>
+      <a href="{% url 'courses' %}">Python Full Stack AI Integrated Course</a>
+      <a href="{% url 'courses' %}">PHP Full Stack AI Integrated Course</a>
+      <a href="{% url 'courses' %}">.Net CoreFull Stack AI Integrated Course</a>
+      <a href="{% url 'courses' %}">MERN CoreFull Stack AI Integrated Course</a>
+      <a href="{% url 'courses' %}">MEAN CoreFull Stack AI Integrated Course</a>
+      <a href="{% url 'courses' %}"
+        >Android/iOS Mobile App Course in Google Flutter AI Integrated Course</a
+      >
+      <a href="{% url 'courses' %}">Website Designing AI Integrated Course</a>
+      <a href="{% url 'courses' %}">UI/UX Design AI Integrated Course</a>
+    </div>
 
-      <button>
-        <a href="{% url 'courses' %}">Microsoft Power BI Course </a>
-      </button>
+    <div class="software-testing-courses">
+      <p>Software Testing Courses</p>
+    </div>
+    <div class="software-testing-courses-buttons">
+      <a href="{% url 'courses' %}">ISTQB Manual Testing Course</a>
+      <a href="{% url 'courses' %}">Software Testing Advanced Course</a>
+      <a href="{% url 'courses' %}">Software Automation Testing Course</a>
+      <a href="{% url 'courses' %}">Playwright Course</a>
+    </div>
+
+    <div class="other-courses">
+      <p>Other Courses</p>
+    </div>
+    <div class="other-courses-buttons">
+      <a href="{% url 'courses' %}">Digital Marketing Expert</a>
     </div>
   </body>
 </html>
