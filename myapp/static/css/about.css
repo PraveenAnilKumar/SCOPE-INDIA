@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-
 * {
   box-sizing: border-box;
 }
@@ -13,7 +11,6 @@ html {
   width: 100%;
 }
 
-/* ---------- HEADER ---------- */
 .container {
   background: linear-gradient(90deg, rgb(4, 11, 45), #04145f);
   height: 175px;
@@ -48,7 +45,6 @@ html {
   margin-bottom: 15px;
   margin-left: 375px;
 }
-
 .nav-links {
   margin: 0;
   scroll-behavior: smooth;
@@ -68,7 +64,7 @@ html {
   font-size: small;
   display: flex;
   align-items: center;
-  height: 36px;
+  height: 36px; /* same height for every link */
   line-height: 1;
 }
 
@@ -87,8 +83,22 @@ html {
 .nav-links a.active-pill {
   background-color: #ff0000;
   color: white;
+  padding: 0 16px; /* only horizontal padding — height comes from the fixed 36px */
+  border-radius: 20px;
+}
+.nav-links a.logout-btn {
+  color: #f0b429;
+  border: 1.5px solid #f0b429;
   padding: 0 16px;
   border-radius: 20px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.nav-links a.logout-btn:hover {
+  background-color: #f0b429;
+  color: #04145f;
 }
 
 /* ---------- PAGE INTRO ---------- */

@@ -1,10 +1,15 @@
 from django.db import models
 from django.contrib.auth.hashers import make_password, check_password
-
+from datetime import timedelta
+import random
+from django.conf import settings
+from django.utils import timezone
 
 class LoginDetails(models.Model):
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=128)   # stores the hash
+    is_verified = models.BooleanField(default=False)
+    created_at = models.DateTimeField(default=timezone.now)
 
     def set_password(self, raw_password):
         self.password = make_password(raw_password)
@@ -14,6 +19,33 @@ class LoginDetails(models.Model):
 
     def __str__(self):
         return self.email
+
+
+
+class EmailOTP(models.Model):
+    login = models.OneToOneField(LoginDetails, on_delete=models.CASCADE)
+    code = models.CharField(max_length=128)       # stores the hash of the OTP
+    created_at = models.DateTimeField(default=timezone.now)
+    attempts = models.PositiveSmallIntegerField(default=0)
+
+    def set_code(self, raw_code):
+        self.code = make_password(raw_code)
+
+    def check_code(self, raw_code):
+        return check_password(raw_code, self.code)
+
+    def is_expired(self):
+        return timezone.now() > self.created_at + timedelta(minutes=settings.OTP_EXPIRY_MINUTES)
+
+    def seconds_until_resend(self):
+        wait = self.created_at + timedelta(seconds=settings.OTP_RESEND_SECONDS) - timezone.now()
+        return max(0, int(wait.total_seconds()))
+
+    @staticmethod
+    def generate_code():
+        return f"{random.SystemRandom().randint(0, 999999):06d}"
+
+
 
 class StudentDetails(models.Model):
     

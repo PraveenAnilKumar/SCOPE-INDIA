@@ -1,0 +1,78 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Scope India{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}?v=3" />
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}?v=1" />
+    <link rel="icon" type="image/png" href="{% static 'images/bird.png' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <a href="{% url 'login' %}">
+          <img class="logo-img" src="{% static 'images/scopeindia-logo.png' %}" alt="Scope India Logo" />
+        </a>
+
+        <div class="right-section">
+          <img class="rating-img" src="{% static 'images/google-rating-scope-india.png' %}" alt="Google Rating Scope India" />
+
+          <div class="nav-links">
+            <a href="{% url 'login' %}"
+               class="{% if request.resolver_match.url_name == 'login' %}active-pill{% endif %}">LOGIN</a>
+            <a href="{% url 'register' %}"
+               class="{% if request.resolver_match.url_name == 'register' %}active-pill{% endif %}">CREATE ACCOUNT</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container_page_intro">
+      <h1>Your career partner!</h1>
+    </div>
+
+    <div class="auth-wrap">
+      <div class="heading">
+        <h2>{% block heading %}{% endblock %}</h2>
+        {% block subheading %}{% endblock %}
+      </div>
+
+      {% if messages %}
+        <ul class="auth-messages">
+          {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% block content %}{% endblock %}
+    </div>
+        <script>
+      var EYE = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
+      var EYE_OFF = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>';
+
+      document.querySelectorAll('input[type="password"]').forEach(function (input) {
+        var wrap = document.createElement("span");
+        wrap.className = "pw-wrap";
+        input.parentNode.insertBefore(wrap, input);
+        wrap.appendChild(input);
+
+        var btn = document.createElement("button");
+        btn.type = "button";               // so it doesn't submit the form
+        btn.className = "pw-toggle";
+        btn.setAttribute("aria-label", "Show password");
+        btn.innerHTML = EYE;
+        wrap.appendChild(btn);
+
+        btn.addEventListener("click", function () {
+          var show = input.type === "password";
+          input.type = show ? "text" : "password";
+          btn.innerHTML = show ? EYE_OFF : EYE;
+          btn.setAttribute("aria-label", show ? "Hide password" : "Show password");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "auth_base.html" %}
+
+{% block title %}Verify Email | Scope India{% endblock %}
+{% block heading %}Verify your email{% endblock %}
+{% block subheading %}
+  <p class="sub">We sent a 6-digit code to <strong>{{ email }}</strong>.</p>
+{% endblock %}
+
+{% block content %}
+  <form method="POST" class="reg-form auth-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Verify</button>
+  </form>
+  <p class="auth-links">
+    Didn't get it? <a href="{% url 'resend_otp' %}">Resend code</a>
+    {% if wait %}<small>(available in {{ wait }}s)</small>{% endif %}
+  </p>
+{% endblock %}

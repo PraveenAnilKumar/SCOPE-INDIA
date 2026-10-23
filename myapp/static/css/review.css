@@ -86,6 +86,20 @@ html {
   padding: 0 16px; /* only horizontal padding — height comes from the fixed 36px */
   border-radius: 20px;
 }
+.nav-links a.logout-btn {
+  color: #f0b429;
+  border: 1.5px solid #f0b429;
+  padding: 0 16px;
+  border-radius: 20px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.nav-links a.logout-btn:hover {
+  background-color: #f0b429;
+  color: #04145f;
+}
 #container_page_intro h1 {
   font-family: "Viga", sans-serif;
   color: #eeaf10;
